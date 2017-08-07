@@ -1,0 +1,22 @@
+{
+  "name": "todo-client",
+  "homepage": "https://github.com/itskp/todo-client",
+  "authors": [
+    "itskp <kapilgajarmal@gmail.com>"
+  ],
+  "description": "simple todo client",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-route": "1.5.8"
+  }
+}
