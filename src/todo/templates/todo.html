@@ -1,5 +1,15 @@
-<div>
-    <ul>
-        <li ng-repeat="todo in ctrl.todo">{{todo.name}}</li>
+<div class="todo-container">
+    <div class="todo-input">
+        <input type="checkbox" id="mark-all" ng-checked="{{ctrl.marked}}" ng-click="ctrl.toggleStatus()">
+        <input type="text" placeholder="What to do ?" ng-model="ctrl.todo" ng-keypress="$event.keyCode==13?ctrl.createTodo():0">
+    </div>
+    <ul class="todo-list">
+        <li ng-repeat="todo in ctrl.todoList track by $index" ng-click="ctrl.updateStatus(todo,$index)">
+            <input type="checkbox" ng-checked="todo.status" id="todo-check">
+            <label ng-class="{strike: todo.status }">{{todo.name}}</label>
+        </li>
     </ul>
+</div>
+<div class="todo-actions">
+    
 </div>
